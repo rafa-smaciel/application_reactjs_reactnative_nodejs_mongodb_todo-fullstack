@@ -7,7 +7,7 @@ export const Container = styled.div`
 export const FilterArea = styled.div`
     width: 100%;
     display: flex;
-    flex-wrap: wrap; //um debaixo do outro em uma eentual redução da tela
+    flex-wrap: wrap; //um debaixo do outro em uma eventual redução da tela
     justify-content: space-around;
     margin-top: 30px;
 
