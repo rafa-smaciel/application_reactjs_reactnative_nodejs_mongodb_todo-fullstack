@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import * as S from './styles';
+import { Link } from 'react-router-dom'
 
 import logo from '../../assets/logo.png';
 import bell from '../../assets/bell.png';
@@ -12,9 +13,9 @@ function Home({lateCount, clickNotification}) {
         <img src={logo} alt="Logo"/>
       </S.LeftSide>
       <S.RightSide>
-        <a href="#">INÍCIO</a>
+          <Link to="/">INÍCIO</Link>
           <span className="dividir" />
-        <a href="#">NOVA TAREFA</a>
+          <Link to="/task">NOVA TAREFA</Link>
           <span className="dividir" />
         <a href="#">SINCRONIZAR CELULAR</a>
           <span className="dividir" />

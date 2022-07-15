@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Home from './views/home';
-import Task from './views/Task';
+import ReactDOM from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+import Routes from './routes';
+
+ReactDOM.render(
   <React.StrictMode>
-    <Task />
-  </React.StrictMode>
+    <Routes />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
