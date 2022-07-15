@@ -7,7 +7,7 @@ import {format} from 'date-fns';
 
 import api from '../../services/api';
 
-//NOSSOS COMPONENTES
+//NOSSOS COMPONENTES.
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import TypeIcons from '../../utils/typeIcons'
