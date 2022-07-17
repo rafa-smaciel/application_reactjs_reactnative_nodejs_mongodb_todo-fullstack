@@ -17,6 +17,7 @@ function Home() {
   const [redirect, setRedirect] = useState(false);
 
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   async function loadTasks(){
     await api.get(`/task/filter/${filterActived}/${isConnected}`)
     .then(response => {
@@ -60,7 +61,7 @@ function Home() {
       </S.FilterArea>
 
       <S.Title>
-        <h3>{filterActived == 'late' ? 'TAREFAS ATRASADAS'  : 'TAREFAS'}</h3>
+        <h3>{filterActived === 'late' ? 'TAREFAS ATRASADAS'  : 'TAREFAS'}</h3>
       </S.Title>
 
       <S.Content>
