@@ -46,6 +46,12 @@ function Task({match}) {
     }
 
     async function Save(){
+        //Validação dos dados
+        if(!title || !description || !date || !hour){
+            alert('Preencha todos os campos')
+            return;
+        }
+
         if(match.params.id){
             await api.put(`/task/${match.params.id}`, {
                 macaddress,
