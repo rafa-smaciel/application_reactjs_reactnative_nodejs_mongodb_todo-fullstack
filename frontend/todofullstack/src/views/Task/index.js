@@ -73,7 +73,17 @@ function Task({match}) {
                 when: `${date}T${hour}:00.000`
             }).then(() =>
                 setRedirect(true)
-            )
+            ).catch(reponse => {
+                alert(reponse.data.error)
+            })
+        }
+    }
+
+    async function Remove(){
+        const res = window.confirm('Deseja realmente remover a tarefa?')
+        if(res === true){
+            await api.delete(`/task/${match.params.id}`)
+            .then(() => setRedirect(true));
         }
     }
 
@@ -131,7 +141,7 @@ function Task({match}) {
                     <input type="checkbox" checked={done} onChange={() => setDone(!done)}/>
                     <span>CONCLUÍDO</span>
                 </div>
-                <button type="button">EXCLUIR</button>
+                { match.params.id && <button type="button" onClick={Remove}>EXCLUIR</button> }
             </S.Options>
            
             <S.Save>
