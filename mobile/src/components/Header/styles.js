@@ -23,6 +23,10 @@ const styles = StyleSheet.create({
         width: 21,
         height: 25
     },
+    notificationText: {
+        fontWeight: 'bold',
+        color: '#EE6B26'
+    },
     circle: {
         width: 20,
         backgroundColor: '#FFF',
@@ -35,11 +39,11 @@ const styles = StyleSheet.create({
     leftIcon: {
         position: 'absolute',
         left: 20,
-        bottom: 2
+        bottom: 10
     },
     leftIconImage: {
-        width: 70,
-        height: 70
+        width: 40,
+        height: 40
     }
 });
 
