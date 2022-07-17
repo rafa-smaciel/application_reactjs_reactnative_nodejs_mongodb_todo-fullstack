@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import * as S from './styles';
 import Qr from 'qrcode.react';
 
@@ -8,6 +8,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';   
 
 function QrCode() {
+    const [mac, setMac] = useState();
     return (
         <S.Container>
             <Header />
@@ -20,7 +21,7 @@ function QrCode() {
 
                 <S.ValidationCode>
                     <span>Digite a numeração que apareceu no celular</span>
-                    <input type="text"/>
+                    <input type="text" onChange={e => setMac(e.target.value)/>
                     <button type="button">SINCRONIZAR</button>
                 </S.ValidationCode>
             </S.Content>
