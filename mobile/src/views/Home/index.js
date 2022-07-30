@@ -40,16 +40,7 @@ export default function Home(){
             <Text style={styles.titleText}>Tarefas</Text>
         </View>
         <ScrollView style={styles.content} contentContainerStyle={{alignItems: 'center'}}>
-            <TaskCard done={true}/>
-            <TaskCard/>
-            <TaskCard/>
-            <TaskCard/>
-            <TaskCard/>
-            <TaskCard/>
-            <TaskCard/>
-            <TaskCard/>
-            <TaskCard/>
-            <TaskCard/>
+            <TaskCard done={false}/>
         </ScrollView>
         <Footer icon={'add'} />
     </View>
